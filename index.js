@@ -24,7 +24,9 @@ class ClashClient {
      *
      */
     async createPrivateGame(languages, modes) {
-        return coc.createPrivateGame(this.cookie, this.userId, languages, modes).then(res => this.lastGameHandle = res[`publicHandle`])
+        let game = coc.createPrivateGame(this.cookie, this.userId, languages, modes)
+        game.then(res => this.lastGameHandle = res[`publicHandle`])
+        return game
     }
 
     /**
