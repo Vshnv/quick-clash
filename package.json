@@ -1,0 +1,18 @@
+{
+  "name": "quick-clash",
+  "version": "1.0.0",
+  "description": "Create private Clash of Code games or fetch public ones from CodinGame",
+  "main": "index.js",
+  "keywords": [
+    "CoC",
+    "Clash-Of-Code",
+    "CodinGame",
+    "Clash",
+    "Coding"
+  ],
+  "author": "Vaishnav Anil",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
