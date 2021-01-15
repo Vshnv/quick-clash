@@ -3,7 +3,7 @@ Create and launch private clash of code games or get active public games
 
 # Example 
 ```js
-const clash = require('./index')
+const clash = require('quick-clash')
 
 clash.createClashClient("MyEmail@Email.com", "MyPassword").then( client => {
     client.createPrivateGame().then(game=> {
