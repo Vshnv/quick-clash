@@ -28,17 +28,13 @@ jobs:
         TEST_PASS: ${{ secrets.TEST_PASS  }}
       with:
         node-version: ${{ matrix.node-version }}
-    - env:
-         TEST_EMAIL: ${{ secrets.TEST_EMAIL  }}
-         TEST_PASS: ${{ secrets.TEST_PASS  }}
-      run: export  
     - name: Install mocha
       run: npm install -g mocha
     - name: Install dependencies
       run: npm install   
     - run: npm ci
     - run: npm run build --if-present
-    - run: echo test $test_email $test_pass $te
+    - run: echo test $test_email $test_pass $te $TEST_EMAIL
       env:
          test_email: ${{ secrets.TEST_EMAIL  }}
          test_pass: ${{ secrets.TEST_PASS  }}
