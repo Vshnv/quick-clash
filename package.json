@@ -1,6 +1,6 @@
 {
   "name": "quick-clash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create private Clash of Code games or fetch public ones from CodinGame",
   "main": "index.js",
   "keywords": [
@@ -10,10 +10,16 @@
     "Clash",
     "Coding"
   ],
+  "scripts": {
+    "test": "mocha test/client-test.js"
+  },
   "repository": "https://github.com/Vshnv/quick-clash.git",
   "author": "Vaishnav Anil",
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
   }
 }
