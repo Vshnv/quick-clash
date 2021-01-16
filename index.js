@@ -1,7 +1,6 @@
 const coc = require("./clash.js")
 
 class ClashClient {
-    lastGameHandle = null
     /**
      * {@link createClashClient}
      *
@@ -9,6 +8,7 @@ class ClashClient {
      * @param userId user id of bot user
      */
     constructor(cookie, userId) {
+        this.lastGameHandle = null
         this.cookie = cookie
         this.userId = userId
     }
