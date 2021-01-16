@@ -38,7 +38,7 @@ jobs:
       run: npm install   
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    - run: echo test $TEST_EMAIL $TEST_PASS 
       env:
          TEST_EMAIL: ${{ secrets.TEST_EMAIL  }}
          TEST_PASS: ${{ secrets.TEST_PASS  }}
