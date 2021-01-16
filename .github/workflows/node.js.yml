@@ -23,9 +23,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-      env:
-        TEST_EMAIL: ${{ secrets.TEST_EMAIL  }}
-        TEST_PASS: ${{ secrets.TEST_PASS  }}
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install mocha
@@ -34,8 +31,7 @@ jobs:
       run: npm install   
     - run: npm ci
     - run: npm run build --if-present
-    - run: echo test $test_email | sed -e 's/\(.\)/\1 /g'
+    - run: npm test
       env:
          test_email: ${{ secrets.TEST_EMAIL  }}
          test_pass: ${{ secrets.TEST_PASS  }}
-         te:  "asas"
