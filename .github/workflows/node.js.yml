@@ -28,6 +28,10 @@ jobs:
         TEST_PASS: ${{ secrets.TEST_PASS  }}
       with:
         node-version: ${{ matrix.node-version }}
+    - env:
+         TEST_EMAIL: ${{ secrets.TEST_EMAIL  }}
+         TEST_PASS: ${{ secrets.TEST_PASS  }}
+      run: export  
     - name: Install mocha
       run: npm install -g mocha
     - name: Install dependencies
