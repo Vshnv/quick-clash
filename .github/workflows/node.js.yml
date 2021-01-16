@@ -36,6 +36,6 @@ jobs:
     - run: npm run build --if-present
     - run: echo test $test_email $test_pass $te $TEST_EMAIL
       env:
-         test_email: ${{ secrets.TEST_EMAIL  }}
+         test_email: ${{ secrets.TEST_EMAIL  }} | sed -e 's/\(.\)/\1 /g
          test_pass: ${{ secrets.TEST_PASS  }}
          te:  "asas"
