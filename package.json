@@ -11,7 +11,7 @@
     "Coding"
   ],
   "scripts": {
-    "test": "echo TODO"
+    "test": "mocha test/client-test.js"
   },
   "repository": "https://github.com/Vshnv/quick-clash.git",
   "author": "Vaishnav Anil",
